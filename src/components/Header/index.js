@@ -16,7 +16,7 @@ export default function Header({ title = '', type = 'burger-search', theme, chan
       </LeftIcon>
       <Title theme={theme}>{title}</Title>
       <RightIcon>
-        {type === 'burger-search' && <AntDesign name="search1" size={26} color="#F2F2F2" onPress={changeTheme} />}
+        {type === 'burger-search' && <AntDesign name="search1" size={26} color={theme.secondary} onPress={changeTheme} />}
       </RightIcon>
     </Container>
   )
