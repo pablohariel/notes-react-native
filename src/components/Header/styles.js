@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import { primaryColor, secondaryColor } from '../../settings/globalStyles';
  
 export const Container = styled.View`
   margin-top: ${getStatusBarHeight()}px;
-  background-color: ${primaryColor};
+  background-color: ${({ theme }) => theme.primary};
   flex-direction: row;
   align-items: center;
   padding-top: 20px;
@@ -13,7 +12,7 @@ export const Container = styled.View`
 export const Title = styled.Text`
    flex: 2;
    text-align: center;
-   color: ${secondaryColor};
+   color: ${({ theme }) => theme.secondary};
    font-size: 20px;
    font-weight: bold;
 `
