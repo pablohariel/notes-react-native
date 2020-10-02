@@ -4,9 +4,15 @@ import { useNavigation  } from '@react-navigation/native';
 import { AntDesign, Feather } from '@expo/vector-icons';
 import { Container, Title, LeftIcon, RightIcon } from './styles';
 
+const fs = require('fs');
+
 export default function Header({ title = '', type = 'burger-search' }) {
 
   const navigation = useNavigation();
+
+  const changeColor = () => {
+    
+  }
 
   return (
     <Container>
