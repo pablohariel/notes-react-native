@@ -7,5 +7,18 @@ export const Container = styled.View`
 
 export const Notes = styled.ScrollView`
   flex: 1;
-  margin-top: 60px;
+  margin-top: 16px;
+`
+
+export const AddBtn = styled.View`
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+`
+
+export const Loading = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.primary};
 `

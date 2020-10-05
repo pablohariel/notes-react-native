@@ -17,6 +17,14 @@ export const Title = styled.Text`
    font-weight: bold;
 `
 
+export const TitleEditable = styled.TextInput`
+   flex: 2;
+   text-align: center;
+   color: ${({ theme }) => theme.secondary};
+   font-size: 20px;
+   font-weight: bold;
+`
+
 export const LeftIcon = styled.View`
   flex: 1;
   padding-left: 30px;
