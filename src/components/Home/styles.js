@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Note } from './Note';
 
 export const Container = styled.View`
   flex: 1;
@@ -9,6 +10,8 @@ export const Notes = styled.ScrollView`
   flex: 1;
   margin-top: 16px;
 `
+
+export const NotesBtn = styled.TouchableOpacity``
 
 export const AddBtn = styled.View`
   position: absolute;

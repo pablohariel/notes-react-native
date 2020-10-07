@@ -2,10 +2,16 @@ import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 import { ActivityIndicator } from 'react-native';
 
-import { Container, Content, Loading } from './styles';
+import { 
+  Container, 
+  Content, 
+  Loading } from './styles';
+  
 import Header from '../Header';
 
-export default function Note({ note = { title: 'Note title', content: 'Type the note' } }) {
+export default function Note({ route }) {
+  const { note } = route.params;
+
   const [title, setTitle] = useState(note.title);
   const [content, setContent] = useState(note.content);
   const [theme, setTheme] = useState({primary: '#2F3437', secondary: '#F2F2F2'});
@@ -38,8 +44,17 @@ export default function Note({ note = { title: 'Note title', content: 'Type the 
       }
       {!isLoading && 
         <>
-          <Header title={title} type="arrow-edit" setTitle={setTitle} theme={theme} />
-          <Content value={content} theme={theme} onChangeText={value => setContent(value)} />
+          <Header 
+            title={title} 
+            type="arrow-edit" 
+            setTitle={setTitle} 
+            theme={theme} 
+          />
+          <Content 
+            value={content} 
+            theme={theme} 
+            onChangeText={value => setContent(value)} 
+          />
         </>
       }
     </Container>
